@@ -31,7 +31,6 @@ const studentList = [
   },
 ];
 
-
 const cLastNameResults = studentList
   .map((std) => {
     return {
@@ -41,6 +40,7 @@ const cLastNameResults = studentList
       avgScore: std.scores.reduce((acc, curr) => acc + curr, 0) / std.scores.length
     }
   })
+  .filter((std) => std.firstName[0] === 'C' && std.lastName[0] === 'C')
   .sort((a, b) => {
     return b.avgScore - a.avgScore;
   })
