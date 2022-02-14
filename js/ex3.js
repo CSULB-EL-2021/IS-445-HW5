@@ -33,8 +33,9 @@ const studentList = [
 
 const cLastNameResults = studentList
   .map((std) => {
+    const { firstName, lastName } = std;
     return {
-      ...std,
+      firstName, lastName,
       minScore: Math.min(...std.scores),
       maxScore: Math.max(...std.scores),
       avgScore: std.scores.reduce((acc, curr) => acc + curr, 0) / std.scores.length

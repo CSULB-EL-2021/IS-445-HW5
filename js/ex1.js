@@ -12,7 +12,7 @@ class Square {
   }
 
   diagonal() {
-    return Math.sqrt(2) * this.side
+    return (Math.sqrt(2) * this.side).toFixed(3)
   }
 
   describe() {
